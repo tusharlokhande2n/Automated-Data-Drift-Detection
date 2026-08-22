@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: data-drift-monitor
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    autoDeploy: false
+    envVars:
+      - key: DRIFT_ALERT_SENDER
+        sync: false
+      - key: DRIFT_ALERT_APP_PASSWORD
+        sync: false
