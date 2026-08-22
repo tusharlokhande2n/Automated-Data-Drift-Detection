@@ -1,0 +1,10 @@
+[lint]
+ignore = [
+    "BLE001", # Streamlit displays operational errors to the user.
+    "C408",   # Existing Plotly configuration remains in its current form.
+    "DTZ005", # Audit timestamps preserve the application's existing local-time format.
+    "F401",   # Retain imports present in the supplied application.
+    "I001",   # Retain the supplied import grouping and its explanatory comments.
+    "PIE810", # Retain the existing readable prefix checks.
+    "TRY002", # Retain the existing user-facing validation exception.
+]
