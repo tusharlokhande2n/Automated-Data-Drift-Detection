@@ -25,6 +25,8 @@ jobs:
       - name: Check Python syntax
         run: python -m py_compile app.py ml_utils.py
       - name: Run unit tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest -q
       - name: Lint source
         run: ruff check app.py ml_utils.py tests
